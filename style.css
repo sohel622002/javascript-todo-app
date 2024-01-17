@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #313131;
+}
+
+header{
+    padding: 10px 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, .15);
+}
+
+main{
+    padding: 10px 20px;
+}
+
+.main-section{
+    max-width: 800px;
+    margin-inline: auto;
+    margin-top: 10px;
+}
+
+.todo-input-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.todo-input-wrapper > input{
+    flex: 1;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.todo-input-wrapper > span{
+    display: inline-flex;
+    width: 40px;
+    aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background-color: #313131;
+    color: white;
+    cursor: pointer;
+}
+
+.todo-list > ul{
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.todo-list li{
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-list li .todo-text{
+    flex: 1;
+    user-select: none;
+}
+
+.todo-btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.todo-btns .edit-btn{
+    color: green;
+}
+
+.todo-list li:hover{
+    background-color: rgb(237, 237, 237)
+}
+
+.todo-list li:nth-child(2n){
+    background-color: rgb(205, 205, 205);
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.remove-btn{
+    position: relative;
+    z-index: 10;
+    color: red;
+}
+
+/* modal */
+
+.modal{
+    position: absolute;
+    display: none;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    width: min(350px, 90vw);
+    background-color: white;
+    padding: 20px;
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-header span{
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+.modal-body{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-input{
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 0, 0, .15);
+}
+
+.modal-button-wrapper{
+    display: flex;
+    justify-content: end;
+}
+
+.update-btn{
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid rgba(0, 0, 0, .15);
+    background-color: transparent;
+    padding: 10px 20px;
+}
